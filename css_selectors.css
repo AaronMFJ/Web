@@ -1,0 +1,36 @@
+/*Selectors to Memorize*/
+/*https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048*/
+
+/*Stars*/ /*--> Applies to everything*/
+* {
+	border: 1px solid lightgrey;
+}
+
+
+/*Descendant Selector*/ /*Change style on part of something, like all anchors in a list only. Or all of a class in ul.*/
+li a /*or .hello*/{
+	color: red;
+}
+
+
+/*Adjacent Selector*/ /*All siblings of something and adjacent. h4 + ul would be all uls next to h4*/
+h4 + ul {
+	border: 4px solid red;
+}
+
+
+/*Attribute Selector*/ /*All of something matching an attribute, like link to google or image from specific source*/
+a[href="https://www.google.com"] {
+	background: blue;
+}
+/*input[type="text"] for example to style all text*/
+
+
+/*nth of Type*/ /*Takes a number and selects every nth. Every 5th div or 2nd li*/
+ul:nth-of-type(3) {
+	background: purple;
+}
+
+ul {
+	color: purple;
+}
