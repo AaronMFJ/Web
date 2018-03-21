@@ -1,0 +1,46 @@
+
+
+/*--GENERAL RULE--*/
+/*selector {
+property: value;
+anotherproperty: value;
+}*/
+
+/*example CSS selector in stylesheet linking*/
+/*Goes into the head file*/
+
+/*Simple color pallet*/
+/*h1 {
+	color: purple;
+}
+li {
+	color: green;
+}*/
+
+
+/*Example different types of color linking*/
+/*h1 {
+	color: #550000; /*hexidecimal
+}
+li {
+	color: rgb(20, 255, 20); /*RBG color
+}*/
+h1 {
+	/*These two are the same. Need all 3*/
+/*	color: rgba(255, 255, 255, 1);
+	border-color: 5px;
+	border-style: solid;*/
+
+	border: 5px solid white;
+}
+h3 {
+	color: rgba(255, 100, 255, 1); /*RBGa where a is alpha*/
+	background: rgba(255, 50, 60, 1);
+}
+
+body {
+	/*background: blue;*/
+	background: url(https://dynaimage.cdn.cnn.com/cnn/q_auto,w_875,c_fill,g_auto,h_492,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170407220916-04-iconic-mountains-matterhorn-restricted.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}

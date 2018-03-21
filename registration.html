@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Registration</title>
+	</head>
+
+	<body>
+		<h1>SECTOR 31</h1>
+
+		<form action="register">
+			<!-- first name required -->
+			<label for="firstName">First Name: </label>
+			<input id="firstName" type="text" placeholder="legal name" name="FIRST" required>
+
+			<!-- last name required -->
+			<label for="lastName">Last Name: </label>
+			<input id="lastName" type="text" placeholder="surname" name="LAST" required>
+			
+			<p></p>
+
+			<!-- gender radio -->
+			<div>
+				<label for="male">Male</label>
+				<input id="male" type="radio" name="GENDER" value="male" required>
+				<label for="female">Female</label>
+				<input id="female" type="radio" name="GENDER" value="female" required>
+				<label for="other">Other</label>
+				<input id="other" type="radio" name="GENDER" value="other" required>
+			</div>
+
+			<p></p>
+			
+			<!-- email and password -->
+			<div>
+				<label for="email">Enter Email: </label>
+				<input id="email" type="email" placeholder="official email" name="EMAIL" required>
+				<label for="password">Create Password: </label>
+				<input id="password" type="password" placeholder="Min 5 characters" name="PASSWORD" pattern=".{5,}" required title="Must be at least 5 characters">
+			</div>
+
+			<p></p>
+			
+			<!-- birthday drop down -->
+			<div>
+				Birthday: 
+				<select name="month" required>
+					<option selected>Month</option>
+					<option value="JAN">Jan</option>
+					<option value="FEB">Feb</option>
+					<option value="MAR">Mar</option>
+					<option value="APR">Apr</option>
+					<option value="MAY">May</option>
+					<option value="JUN">Jun</option>
+					<option value="JUL">Jul</option>
+					<option value="AUG">Aug</option>
+					<option value="SEP">Sep</option>
+					<option value="OCT">Oct</option>
+					<option value="NOV">Nov</option>
+					<option value="DEC">Dec</option>
+				</select>
+
+				<select name="day" required>
+					<option selected>Day</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+
+				<select name="year" required>
+					<option selected>Year</option>
+					<option value="9892">9892</option>
+					<option value="9893">9893</option>
+					<option value="9894">9894</option>
+					<option value="9895">9895</option>
+					<option value="9896">9896</option>
+					<option value="9897">9897</option>
+					<option value="9898">9898</option>
+					<option value="9899">9899</option>
+					<option value="9810">9810</option>
+					<option value="9811">9811</option>
+					<option value="9812">9812</option>
+					<option value="9813">9813</option>
+				</select>
+			</div>
+			<p></p>
+
+			<!-- checkbox terms and conditions -->
+			Check if you agree to the terms and conditions set by the United Federation of Planets
+			<p></p>
+			<label for="tos">Agree</label>
+			<input id="tos" type="checkbox" name="tosTRUE" required>
+			
+			<p></p>
+			
+			<!-- submit button -->
+			<button>REGISTER</button>
+
+		</form>
+	</body>
+</html>
