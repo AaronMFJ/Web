@@ -1,0 +1,23 @@
+/* photogrid css style */
+
+
+/* image settings */
+img {
+	width: 30%;
+	float: left; /* gets rid of the default space between images */
+/* 	grid is 3x4. 6 veritcal row margins.
+	each image is 30% = 90%
+	to fill 100$ screen, take remaining 10%/6 margins
+	10%/6 = 1.66 */
+	margin: 1.66%;
+}
+
+body {
+	font-family: Cagliostro;
+}
+
+h2 {
+	margin: 1.66%;
+	border-bottom: 2px solid #F1F1F1;
+	width: 30%;
+}

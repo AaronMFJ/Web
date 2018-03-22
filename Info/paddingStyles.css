@@ -1,0 +1,49 @@
+/* fontstyle css examples */
+
+#paddingTutorials {
+	/* content - width and height  */
+	width: 50%;
+	
+	/* borders */
+	border:  2px solid blue;
+
+	/* padding */
+	padding-left: 10px;
+
+	/* margins */
+	/* margin-top: 100px; */
+	margin: 20px 40px 500px 100px; /* top right bottom left */
+	/* margin: 0 auto; for auto. Can also add margin 50px 20px under it to add */
+}
+
+/* div {
+	margin: 0 auto;
+	padding: 50px;
+
+} */
+
+table {
+	margin: auto;
+}
+
+td {
+	/* border: 5px solid red; */
+	width: 100px;
+	height: 100px;
+}
+
+.vertical {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.horizontal {
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}
+
+/* not used but could be alt to center instead of 2 classes */
+#center {
+	border: 2px solid black;
+}
+
