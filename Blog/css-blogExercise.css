@@ -3,13 +3,24 @@
 
 /* centered rectangle scales to bottom of page
 gray think border	 */
-
+body {
+	font-family: 'Share Tech';
+	width: 75%;
+	border: 20px solid gray;
+	margin: 40px auto;
+	padding: 5px;
+}
 
 
 /* 	date small all caps left aligned
 		letter spacing apart */
+h5 {
+	color: blue;
+}
 
-
+p {
+	font-size: 14px;
+}
 
 /* 	gray title left aligned */
 
