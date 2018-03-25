@@ -1,0 +1,44 @@
+/* padding so content isn't behind navbar */
+body {
+	padding-top: 70px;
+}
+
+
+/* grid color placeholder */
+.pink {
+	background-color: pink;
+	border: 1px solid purple;
+}
+
+/* main page background */
+.cat {
+background-image: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec13e2bc38df66aaaf8d88ff4607dfe1&auto=format&fit=crop&w=1834&q=80);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0px 0px;
+}
+
+.login {
+	margin-top: 25%;
+}
+
+hr {
+	width: 35%;
+}
+
+li {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.title {
+	color: white;
+	font-size: 60px;
+	text-shadow: 0px 2px black;
+}
+
+p {
+	color: white;
+	font-size: 20px;
+	text-shadow: 0px 1px black;
+}
