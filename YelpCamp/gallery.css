@@ -10,6 +10,28 @@ img {
 	background-position: center;
 }
 
+/* change color of jumbo and glyph */
+.jumbotron {
+  color: #2c3e50;
+  background: ;
+}
+
+.navbar-inverse {
+  background: #2c3e50;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+
+
+/* selecor shows this was overriding coloring anchor tag only
+so I copied it and overrode it */
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
 .image1 {
   background-image: url(https://lh3.googleusercontent.com/hwcHcmFslHmi2kH7rWKPO7FfJSfZCKjP6uLfQH6ewuCiIg-JhYNJYtnAHnE3Y6rMThTLAR-jCdaO6yTBkPSCR5dlgFEwjLppxjfsF3xB-D2W0k4oXtLtPF80swxyTVuE7XXdhx_fNB3G497Uw9ZN9ffEX80MC6gl-oQ4HNFgoyhKtJ_ktTjp0KVrpqblHGiHRoLiXcHsOYzWUn_5jbUlOVNZBapm1CTP0feUbVV6B8G-dfEWwW3B45JbrmLwoKoSOuPP4g07u4WOHvaziZlBYXkWBcBF0H6jND4uGmo-Eh6c4ojFURM0IGW0VGJ8k6USySzDPA8-qB0E0eUlO8Q5bxhzWWsxUeTwS6ZPfRPtn6HYhlcLyuMZxeBon8v6SmIZ2q7qNXOmT9XN4vCg6M3KdEVr1fok-BG_E_Qdwsk2HrWb2_DMmKEyFYimNiQUlHPAYSVCcI6pT8x2B2uC59xv_tj8WWFQpv-1uw-hz6Qlks3FemrIFkpYmzGov_bbLt5b6gpglld8AVBTWkRF4PwCaHsQlaIXsAlzt7A3awYaRg-FlFqU1K9tx2E0S33HYzQlqxqsU6b0_n6Is2fJOY3DRb2doa7g1Ry8mR6auKBCfzuGfU0G-fAH1h9HBtuJW0qEz0DbELzSovx-09rE_YnsCpPpOCtct34mxg=w1120-h840-no);
 }
