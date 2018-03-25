@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Jones//Gallery</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- stylesheet for padding -->
+		<link rel="stylesheet" type="text/css" href="gallery.css">
+
+		<!-- color helper to show grids -->
+		<style type="text/css">
+		.pink {
+			background-color: pink;
+			border: 1px solid purple;
+		}
+		</style>
+
+
+
+	</head>
+
+
+
+	<body>
+		<!--        NAVBAR        -->
+		<!-- navbar inverse makes it black -->
+		<!-- need 70px padding so content isn't behind the bar added in css -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+
+					<!-- hambruger icon match datatarget to collapse id -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a href="#" class="navbar-brand"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> The Bots</a>
+				</div>
+				
+				<!-- collapse navbar. set id= for data -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#" class="navbar-brand">About</a></li>
+						<li><a href="#" class="navbar-brand">Insert</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" class="navbar-brand">Insert</a></li>
+						<li><a href="#" class="navbar-brand">Insert</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--   container  -->
+		<div class="container">
+			<div class="jumbotron">
+			<!-- add span inside the element you want the glyphicon to be in -->
+			<h1><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Jones//Gallery</h1>
+			<p>Welcome to the Jones gallery!</p>
+			<!-- jumbotron end -->
+			</div>
+			<div class="row flex"> 
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail"> <!-- thumbnail fits picture w/border -->
+						<div class="image image1"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image2"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image3"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail"> <!-- thumbnail fits picture w/border -->
+						<div class="image image4"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image5"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image6"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail"> <!-- thumbnail fits picture w/border -->
+						<div class="image image7"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image8"></div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="thumbnail">
+						<div class="image image9"></div>
+					</div>
+				</div>				
+			<!-- row 1 end -->
+			</div>
+		<!-- container end -->
+		</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
