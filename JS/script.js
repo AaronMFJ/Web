@@ -129,30 +129,101 @@
 // 	console.log(str[i]);
 // }
 
-console.log("Print all numbers between -10 and 19")
-for(var i = -10; i <= 19; i++) {
-	console.log(i)
-}
+// console.log("Print all numbers between -10 and 19")
+// for(var i = -10; i <= 19; i++) {
+// 	console.log(i)
+// }
 
-console.log("Pring all even numbers between 10 and 40")
-for(var i = 10; i <= 40; i++) {
-	if(i % 2 === 0) {
-	console.log(i);		
-	}
+// console.log("Pring all even numbers between 10 and 40")
+// for(var i = 10; i <= 40; i++) {
+// 	if(i % 2 === 0) {
+// 	console.log(i);		
+// 	}
 
-}
+// }
 
-console.log("Print all odd numbers between 300 and 333")
-for(var i = 300; i <= 333; i++) {
-	if(i % 2 !== 0) {
-	console.log(i);
-	}
-}
+// console.log("Print all odd numbers between 300 and 333")
+// for(var i = 300; i <= 333; i++) {
+// 	if(i % 2 !== 0) {
+// 	console.log(i);
+// 	}
+// }
 
-console.log("Print all numbers divisible by 5 AND 3 between 5 and 50")
-for(var i = 5; i <= 50; i++) {
-	if(i % 5 == 0 && i % 3 == 0) {
-	console.log(i);	
-	}
+// console.log("Print all numbers divisible by 5 AND 3 between 5 and 50")
+// for(var i = 5; i <= 50; i++) {
+// 	if(i % 5 == 0 && i % 3 == 0) {
+// 	console.log(i);	
+// 	}
 	
+// }
+///////////////////////////////////////////////////////////////
+//////////////////// FUNCTIONS ///////////////////////////////
+// function doSomething() {
+// 	console.log("hello world");
+// }
+// doSomething();
+
+// function sayHi() {
+// 	console.log("hey");
+// 	console.log("bye");
+// }
+
+// sayHi();
+
+// function sayHello(name) {
+// 	console.log("hey" + name);
+// }
+
+// sayHello("Aaron")
+
+// Function Declarations////////////////////
+// function area(len, wid) {
+// 	console.log(len * wid);
+// 	var result = len * wid;
+// 	return result
+// }
+
+// area(9,2)
+
+// function capitalize(str) {
+// 	return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+// var city = "paris";
+// var capital = capitalize(city);
+// console.log(capital);
+
+// function expression//////////////////
+// var capitalize = function(str) {
+// 	return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+//EXERCISES////////////////////
+// function isEven(num) {
+// 	if(num % 2 === 0) {
+// 		return true
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
+
+// isEven(3)
+// console.log(isEven(4));
+// console.log(isEven(21));
+// console.log(isEven(68));
+// console.log(isEven(333));
+
+function factor(num) {
+	var result = 0
+	while(num > 0) {
+		num *= (num - 1);
+		num--;
+	}
+return result;
 }
+
+console.log(factor(5));
+console.log(factor(2));
+console.log(factor(10));
+//console.log(factor(0));
