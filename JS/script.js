@@ -384,3 +384,34 @@
 
 /////////////////////////////////////////////////////////
 ///////////////// ARRAY ITERATION ///////////////////////
+
+////////////////For loop through the array////////////////
+var colors = ["red", "orange", "yellow"];
+for(var i = 0; i < colors.length; i++) {
+	console.log(colors[i]);
+}
+//////////////////////////////////////////////////////////
+
+
+//forEach
+//arr.forEach(someFunction)
+
+// var colors = ["red", "orange", "yellow"];
+// colors.forEach(function(iLoveDogs)) {
+// 	console.log("hey" + iLoveDogs);
+// });  //prints hey red, hey orange, hey yellow 
+// //iLoveDogs is holding each item in array and passes items into function
+
+//define
+var colors = ["red", "orange", "yellow"];
+
+// function of thins
+function printColor(color) {
+	console.log("****");
+	console.log(color);
+	console.log("****")
+}
+
+// forEach the function above
+// printColor remove () so it doesn't call the function before the forEach
+colors.forEach(printColor);
