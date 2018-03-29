@@ -199,7 +199,12 @@
 // }
 
 //EXERCISES////////////////////
+
+// //isEven?
 // function isEven(num) {
+// // 	//alternate
+// // 	return num % 2 ===0;
+// // }
 // 	if(num % 2 === 0) {
 // 		return true
 // 	}
@@ -208,22 +213,174 @@
 // 	}
 // }
 
-// isEven(3)
 // console.log(isEven(4));
 // console.log(isEven(21));
 // console.log(isEven(68));
 // console.log(isEven(333));
 
-function factor(num) {
-	var result = 0
-	while(num > 0) {
-		num *= (num - 1);
-		num--;
-	}
-return result;
-}
+// //Factorize 5x4x3x2x1
+// function factor(num) 
+// {
+// 	//version A
+// 	if (num == 0) {
+// 		return 1;
+// 	}
+// 	var result = num
+// 	for(var result = num; num > 1; num--) {
+// 		result *= (num - 1);	
+// 	}
+// 	// Version B
+// 	// while(num > 1) 
+// 	// {
+// 	// 	result *= (num - 1);
+// 	// 	num--;
+// 	// }
 
-console.log(factor(5));
-console.log(factor(2));
-console.log(factor(10));
-//console.log(factor(0));
+// 	//Version C
+// 	// var result = 1;
+// 	// for(var i = 2; i <= num; i++) {
+// 	// 	result *= i;
+// 	// }
+// 	return result;
+// }
+
+// console.log(factor(5));
+// console.log(factor(2));
+// console.log(factor(10));
+// console.log(factor(0));
+
+// //Replace all - with _
+// // /term/g does a global replace
+// function kebab(str) 
+// {
+// 	if(str.indexOf("-")) 
+// 	{
+// 	var result = str.replace(/-/g, "_")
+// 	return result;
+// 	}
+// }
+
+// console.log(kebab("hello-world"));
+// console.log(kebab("dogs-are-awesome"));
+// console.log(kebab("blah"));
+
+/////////////////////////////////////////////////////////
+/////////////////JS SCOPE///////////////////////////////
+
+//Scope is the context that code is executed in.
+
+//in the example, x is only available in the fuction.
+//not defined in the global scope
+// funciton doMath() {
+// 	var x = 40;
+// 	console.log(x);
+// }
+
+//in this example var y = 99; y is defined in the global scope.
+// funciton doMoreMath() {
+// 	console.log(y);
+// }
+// returns 99
+
+// child scopes have access to global/parent scope. But the
+// global scope can be changed if changed in the child
+// you can keep name in scope by adding var. So, global str 
+// and var str in child will be separate.
+
+///////////////////////////////////////////////////////
+/////////////////////HIGHER ORDER FUNCTIONS////////////
+
+// // setInterval(anotherFunction, interval in ms)
+
+// function sing() {
+// 	console.log("twinkle twinkle");
+// 	console.log("how I wonder");
+// }
+
+// function song() {
+// 	console.log("little start");
+// }
+
+// // will run sing every 1 second
+// // clearInterval() can stop it
+// setInterval(sing, 1000);
+
+// // You can use anonymous function to use to call code
+// setInterval(function() {
+// 	console.log("I am anonymous function");
+// }, 2000);
+
+//////////////////////////////////////////////////////////
+//////////////// JS ARRAYS ///////////////////////////////
+
+// var friends = ["eva", "comet", "siarra"];
+// // (eva 0, comet 1, siarra 2) indexed at 0
+//  console.log(friends[0]) is eva
+
+// //can set different index
+// friends[0] = "bug" will put bug in index 0
+
+// add another index to the array to add to it
+// friends[3] = "David"
+
+// //can initialze different ways
+// var friends = []
+// var friends = new Array()
+
+// //can hold any data
+// var random = [39, true, "hey", null]
+
+// //arrays have a length property 
+// var nums = [35, 43, 23, 23];
+// nums.length //4
+
+
+/////////////////////////
+// PUSH AND POP
+
+//PUSH adding something to end or array; returns array.length
+
+// var colors = ["red", "orange", "yellow"];
+// colors.push("green") adds green to end of array and returns array length
+
+//POP removes last item in array; returns removed item
+
+// var colors = ["red", "orange", "yellow"];
+// colors.pop() returns last item in array and removes it
+
+/////////////////////////
+// SHIFT AND UNSHIFT
+
+// //UNSHIFT adds to the front of array;
+// // var colors = ["red", "orange", "yellow"];
+// colors.unshift("teal") adds to index 0
+
+//SHIFT removes first item in array; returns item removed
+// var colors = ["red", "orange", "yellow"];
+// colors.shift() removes red from array; returns red
+// Can be stored in variable
+// var ded = colors.shift() //ded = red
+
+
+///////////////////////
+/////INDEXOF/////////
+
+// //use indexOf to find index of item in array
+// var colors = ["red", "orange", "yellow"];
+// colors.indexOf("red") returns 0
+// colors.indexOf("yellow") returns 2
+// //returns -1 if doens't exist
+
+///////////////////////
+//// SLICE
+
+// //Use to copy parts of an array .slice(start, stop)
+// var colors = ["red", "orange", "yellow"];
+// var warm = colors.slice(1, 2) returns orange
+
+// // Does not alter original array
+// // You can also use Slice to copy entire array
+// var newColors = colors.slice()
+
+/////////////////////////////////////////////////////////
+///////////////// ARRAY ITERATION ///////////////////////
