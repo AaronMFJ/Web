@@ -386,32 +386,71 @@
 ///////////////// ARRAY ITERATION ///////////////////////
 
 ////////////////For loop through the array////////////////
-var colors = ["red", "orange", "yellow"];
-for(var i = 0; i < colors.length; i++) {
-	console.log(colors[i]);
-}
-//////////////////////////////////////////////////////////
-
-
-//forEach
-//arr.forEach(someFunction)
-
 // var colors = ["red", "orange", "yellow"];
-// colors.forEach(function(iLoveDogs)) {
-// 	console.log("hey" + iLoveDogs);
-// });  //prints hey red, hey orange, hey yellow 
-// //iLoveDogs is holding each item in array and passes items into function
+// for(var i = 0; i < colors.length; i++) {
+// 	console.log(colors[i]);
+// }
+// //////////////////////////////////////////////////////////
 
-//define
-var colors = ["red", "orange", "yellow"];
 
-// function of thins
-function printColor(color) {
-	console.log("****");
-	console.log(color);
-	console.log("****")
-}
+// //forEach
+// //arr.forEach(someFunction)
 
-// forEach the function above
-// printColor remove () so it doesn't call the function before the forEach
-colors.forEach(printColor);
+// // var colors = ["red", "orange", "yellow"];
+// // colors.forEach(function(iLoveDogs)) {
+// // 	console.log("hey" + iLoveDogs);
+// // });  //prints hey red, hey orange, hey yellow 
+// // //iLoveDogs is holding each item in array and passes items into function
+
+// //define
+// var colors = ["red", "orange", "yellow"];
+
+// // function of thins
+// function printColor(color) {
+// 	console.log("****");
+// 	console.log(color);
+// 	console.log("****")
+// }
+
+// // forEach the function above
+// // printColor remove () so it doesn't call the function before the forEach
+// colors.forEach(printColor);
+
+
+////////////////EXAMPLES FOREACH//////////////////////
+// var array1 = ['a', 'b', 'c'];
+
+// array1.forEach(function(element) {
+//   console.log(element);
+// });
+
+// // expected output: "a"
+// // expected output: "b"
+// // expected output: "c"
+
+// const items = ['item1', 'item2', 'item3'];
+// const copy = [];
+
+// items.forEach(function(item){
+//   copy.push(item)
+// });
+
+
+// the following will print out 3,6,9
+// var numbers = [1,2,3,4,5,6,7,8,9,10];
+// var colors = ["red", "green", "orange", "yellow"];
+
+// for each item in the numbers array, create and run function called color
+// and run the if statement for each element. So, 1mod3, 2mod3, 3mod3
+// numbers.forEach(function(color) {
+// 	if(color % 3 === 0) {
+// 		console.log(color);
+// 	}
+// });
+
+// // Same thing but as for loop
+// for (var i = 1; i <= numbers.length; i++) {
+// 	if(i % 3 === 0) {
+// 		console.log(i);
+// 	}
+// }
