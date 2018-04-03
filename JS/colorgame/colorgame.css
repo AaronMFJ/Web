@@ -1,0 +1,40 @@
+body {
+	background-color: #232323;
+}
+
+h1 {
+	color: white;
+}
+
+
+.square {
+	width: 30%; 					/* per box */
+	background-color: purple;
+	padding-bottom: 30%; 			/* add some space */
+	float: left; 					/* puts in line instead of vertical */
+	margin: 1.66%; 					/* between boxes */
+}
+
+#container {
+	margin: 0 auto; 				/* centering 0 on top, auto on sides */
+	max-width: 600px;
+	text-align: center;	
+	background-color: lightblue;
+
+}
+
+.selected {
+	background-color: lightblue;
+}
+
+.difficulty {
+	background-color: lightblue;
+}
+
+#stripe {
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	color: black;
+}

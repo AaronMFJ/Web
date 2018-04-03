@@ -31,7 +31,8 @@ document.querySelector("ul").addEventListener("click", function() {
 }) //ouputs for every li in the ul that you click
 
 //change individual li with separate listeners
-var lis = document.querySelectorAll("li");
+//changed this from selecting li to p to do other things
+var lis = document.querySelectorAll("p");
 
 for (var i = 0; i < lis.length; i++) {
 	lis[i].addEventListener("click", function() {
@@ -71,10 +72,39 @@ backButton.addEventListener("click", function() {
 	// }; //altToggle is a css class
 })
 
+//////////////////////////////////////////////////////////////////////hover events
+
+//changed this from firstLis to lis
+var lis = document.querySelectorAll("li");
 
 
+//change li to blue on mouse over 
+// firstLi.addEventListener("mouseover", function() {
+// 	// console.log("mouse over");
+// 	firstLi.style.color = "blue"
+// })
+// //changes it back to a different color when mouse over is done
+// firstLi.addEventListener("mouseout", function() {
+// 	// console.log("mouse over");
+// 	firstLi.style.color = "black"
+// })
 
+//instead, let's apply it to all lis with a loop
+for (var i = 0; i < lis.length; i++) 
+{
+	lis[i].addEventListener("mouseover", function() {
+	this.classList.add("selected"); //this applies to THIS LOOP
+	});
 
+	lis[i].addEventListener("mouseout", function() {
+	// console.log("mouse over");
+	this.classList.remove("selected");
+	});
+	
+	lis[i].addEventListener("click", function() {
+		this.classList.toggle("done");
+	})
+}
 
 
 
