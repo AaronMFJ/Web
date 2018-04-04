@@ -12,7 +12,6 @@ var winResult = document.querySelector("#win");
 var retry = document.querySelector("#retry");
 var easy = document.querySelector("#easyBtn");
 var hard = document.querySelector("#hardBtn");
-// var newColors = document.querySelector()
 var gameOver = false;
 var easyMode = false;
 var hardMode = true;
@@ -20,44 +19,45 @@ var hardMode = true;
 
 
 //set title display to match pickedColor
-colorDisplay.textContent = pickedColor.toUpperCase()
+colorDisplay.textContent = pickedColor
 
 
-
+//Easy Difficulty
 easy.addEventListener("click", function() {
-	this.classList.add("difficulty")
-	hard.classList.remove("difficulty")
+	this.classList.add("selected");
+	hard.classList.remove("selected");
 	easyMode = true;
 	hardMode = false;
 	console.log("easy activated")
 	colors = colorGenerator(3);
 	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
+	colorDisplay.textContent = pickedColor
 	for (var i = 0; i < squares.length; i++) {
 		if (colors[i]) {
 			squares[i].style.backgroundColor = colors[i]
 		} else {
 			squares[i].style.display = "none"
-		}
-	}
+		};
+	};
+	gameOver = false;
 });
+
+
+//Hard Difficulty
 hard.addEventListener("click", function() {
-	this.classList.add("difficulty")
-	easy.classList.remove("difficulty")
+	this.classList.add("selected");
+	easy.classList.remove("selected");
 	easyMode = false;
 	hardMode = true;
-	console.log("hard activated")
-	colors = colorGenerator(6);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
-	for (var i = 0; i < squares.length; i++) {
-		if (colors[i]) {
-			squares[i].style.backgroundColor = colors[i]
-		} else {
-			squares[i].style.display = "none"
-		}
-	}
-});
+	console.log("hard activated");
+	newGame();
+
+	// colors = colorGenerator(6);
+	// pickedColor = pickColor();
+	// colorDisplay.textContent = pickedColor;
+	// for (var i = 0; i < squares.length; i++) {
+	// 	squares[i].style.backgroundColor = colors[i]
+	});
 
 
 //Note:1
@@ -79,15 +79,17 @@ for(var i = 0; i < squares.length; i++) {
 			this.style.backgroundColor = "#232323";
 			resultDisplay.textContent = "Try Again!";
 			
-			}
+			};
 		};
 	});
 };
 
+
+//Try Again?
 retry.addEventListener("click", function() {
-	console.log("newgame")
-	newGame()
-})
+	console.log("newgame");
+	newGame();
+});
 
 
 ///////////////////	FUNCTIONS	////////////////////
@@ -99,13 +101,14 @@ function win() {
 			squares[i].style.backgroundColor = pickedColor;
 		};
 		retry.textContent = "Play Again? "
+		//replaced mouseover with button:hover in css
 		// retry.addEventListener("click", newGame());
-		retry.addEventListener("mouseover", function() {
-			this.classList.add("selected");
-		});
-		retry.addEventListener("mouseout", function() {
-			this.classList.remove("selected");
-		});
+		// retry.addEventListener("mouseover", function() {
+		// 	this.classList.add("selected");
+		// });
+		// retry.addEventListener("mouseout", function() {
+		// 	this.classList.remove("selected");
+		// });
 	};
 };
 
@@ -130,10 +133,10 @@ function colorGenerator(num) {
 
 
 function randomColor() {
-	var rgb = "rgb("
-	var r = Math.floor(Math.random() * 256)
-	var g = Math.floor(Math.random() * 256)
-	var b = Math.floor(Math.random() * 256)
+	var rgb = "rgb(";
+	var r = Math.floor(Math.random() * 256);
+	var g = Math.floor(Math.random() * 256);
+	var b = Math.floor(Math.random() * 256);
 	return rgb + r + ", " + g + ", " + b + ")"
 
 }
@@ -141,18 +144,28 @@ function randomColor() {
 
 
 function newGame() {
-	colors = colorGenerator(6)
+	if (easyMode) {
+		colors = colorGenerator(3)
+	} else {
+		colors = colorGenerator(6)
+	};
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
 	for(var i = 0; i < squares.length; i++) {
 		squares[i].style.backgroundColor = colors[i];
-	}
-	colorDisplay.textContent = pickedColor.toUpperCase();
+		if (hardMode) {
+			squares[i].style.display = "block"
+		}
+	};
+	colorDisplay.textContent = pickedColor
 	retry.textContent = "New Colors";
-	resultDisplay.textContent = null
-	winResult.style.backgroundColor = "#232323";
+	resultDisplay.textContent = null;
+	winResult.style.backgroundColor = "#3097e1";
 	gameOver = false;
-}
+};
+
+
+/////////////////////	NOTES	////////////////////////////
 //Note1:
 //for each square box, change background color
 //to each rbg color in the array. While cycling
@@ -171,3 +184,6 @@ function newGame() {
 //Math.random() is between 0-.99. Math.random() * 5 = 0-4.99
 //Math.floor() returns highest of the random
 //Math.floor(Math.random() * 5 + 1) = 0-5
+
+/////////////////////// BUGS ////////////////////////////
+//1 rgb is lowercase with new game
