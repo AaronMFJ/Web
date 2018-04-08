@@ -1,8 +1,8 @@
-console.log("connected")
-
 
 
 //////////////////	VARIABLES	/////////////////////
+
+
 var colors = colorGenerator(6);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
@@ -15,7 +15,6 @@ var hard = document.querySelector("#hardBtn");
 var gameOver = false;
 var easyMode = false;
 var hardMode = true;
-
 
 
 //set title display to match pickedColor
@@ -55,13 +54,12 @@ for(var i = 0; i < squares.length; i++) {
 
 
 //Try Again?
-retry.addEventListener("click", function() {
-	console.log("newgame");
-	newGame();
-});
+retry.addEventListener("click", newGame);
 
 
 ///////////////////	FUNCTIONS	////////////////////
+
+
 
 function win() {
 	if(gameOver) {
@@ -74,13 +72,11 @@ function win() {
 };
 
 
-
 //Note:3
 function pickColor() {
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
 }
-
 
 
 function colorGenerator(num) {
@@ -92,7 +88,6 @@ function colorGenerator(num) {
 };
 
 
-
 function randomColor() {
 	var rgb = "rgb(";
 	var r = Math.floor(Math.random() * 256);
@@ -101,7 +96,6 @@ function randomColor() {
 	return rgb + r + ", " + g + ", " + b + ")"
 
 }
-
 
 
 function newGame() {
@@ -155,6 +149,7 @@ function hardGame() {
 };
 
 
+
 /////////////////////	NOTES	////////////////////////////
 // Note1:
 // For each squarebox in the array,
@@ -180,8 +175,6 @@ function hardGame() {
 
 
 
-
-
 //alternative mouseover function, replaced by css
 		// retry.addEventListener("click", newGame());
 		// retry.addEventListener("mouseover", function() {
@@ -193,4 +186,3 @@ function hardGame() {
 
 
 /////////////////////// BUGS ////////////////////////////
-//1 rgb is lowercase with new game
