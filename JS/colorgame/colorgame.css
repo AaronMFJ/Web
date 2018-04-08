@@ -16,6 +16,7 @@ h1 {
 button {
 	border-style: none;
 	color: #3097e1;
+	background-color: white;
 	font-weight: 700;
 	font-size: inherit;
 	letter-spacing: 1px;

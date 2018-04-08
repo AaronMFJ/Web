@@ -23,41 +23,11 @@ colorDisplay.textContent = pickedColor
 
 
 //Easy Difficulty
-easy.addEventListener("click", function() {
-	this.classList.add("selected");
-	hard.classList.remove("selected");
-	easyMode = true;
-	hardMode = false;
-	console.log("easy activated")
-	colors = colorGenerator(3);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor
-	for (var i = 0; i < squares.length; i++) {
-		if (colors[i]) {
-			squares[i].style.backgroundColor = colors[i]
-		} else {
-			squares[i].style.display = "none"
-		};
-	};
-	gameOver = false;
-});
+easy.addEventListener("click", easyGame);
 
 
 //Hard Difficulty
-hard.addEventListener("click", function() {
-	this.classList.add("selected");
-	easy.classList.remove("selected");
-	easyMode = false;
-	hardMode = true;
-	console.log("hard activated");
-	newGame();
-
-	// colors = colorGenerator(6);
-	// pickedColor = pickColor();
-	// colorDisplay.textContent = pickedColor;
-	// for (var i = 0; i < squares.length; i++) {
-	// 	squares[i].style.backgroundColor = colors[i]
-	});
+hard.addEventListener("click", hardGame); 
 
 
 //Note:1
@@ -67,7 +37,6 @@ for(var i = 0; i < squares.length; i++) {
 
 	//add click listeners to squares
 	squares[i].addEventListener("click", function() {
-		//Note:2
 		var clickedColor = this.style.backgroundColor;
 		console.log(clickedColor)
 		if(!gameOver) {
@@ -101,14 +70,6 @@ function win() {
 			squares[i].style.backgroundColor = pickedColor;
 		};
 		retry.textContent = "Play Again? "
-		//replaced mouseover with button:hover in css
-		// retry.addEventListener("click", newGame());
-		// retry.addEventListener("mouseover", function() {
-		// 	this.classList.add("selected");
-		// });
-		// retry.addEventListener("mouseout", function() {
-		// 	this.classList.remove("selected");
-		// });
 	};
 };
 
@@ -155,6 +116,12 @@ function newGame() {
 		squares[i].style.backgroundColor = colors[i];
 		if (hardMode) {
 			squares[i].style.display = "block"
+		} else {
+			if (colors[i]) {
+				squares[i].style.backgroundColor = colors[i]
+			} else {
+				squares[i].style.display = "none"
+			};
 		}
 	};
 	colorDisplay.textContent = pickedColor
@@ -165,25 +132,65 @@ function newGame() {
 };
 
 
-/////////////////////	NOTES	////////////////////////////
-//Note1:
-//for each square box, change background color
-//to each rbg color in the array. While cycling
-//through, also add click listeners to each square.
 
-//Note2:
-//clickedColor is being set to the background color
-//of each square. .style.backgroundColor returns a rgb
-//color and it's beting set to clickedColor.
-//The if statement covers if the clickedColor is the
-//pickedColor that was randomly generated.
-//Selecting the wrong color (else) changes square to background
-//color
+function easyGame() {
+	easy.classList.add("selected");
+	hard.classList.remove("selected");
+	easyMode = true;
+	hardMode = false;
+	console.log("easy activated")
+	colors = colorGenerator(3);
+	newGame();
+};
+
+
+function hardGame() {
+	hard.classList.add("selected");
+	easy.classList.remove("selected");
+	easyMode = false;
+	hardMode = true;
+	console.log("hard activated");
+	newGame();
+
+};
+
+
+/////////////////////	NOTES	////////////////////////////
+// Note1:
+// For each squarebox in the array,
+// 	change background color to the random
+// 	generated color rgb values.
+// 	Add clicklisteners to each square,
+// 	Create var clickedcolor and set it to
+// 	whichever squares background color you clicked.
+// 	If gameover is false,
+// 		if clickedcolor matches pickedcolor,
+// 		show you win, set gameover to true,
+// 		and call the win function.
+// 	if gameover is true,
+// 		set the background color of squre you clicked on
+// 		to blend into background and say sorry sucker
+
+
 
 //Note3:
 //Math.random() is between 0-.99. Math.random() * 5 = 0-4.99
 //Math.floor() returns highest of the random
 //Math.floor(Math.random() * 5 + 1) = 0-5
+
+
+
+
+
+//alternative mouseover function, replaced by css
+		// retry.addEventListener("click", newGame());
+		// retry.addEventListener("mouseover", function() {
+		// 	this.classList.add("selected");
+		// });
+		// retry.addEventListener("mouseout", function() {
+		// 	this.classList.remove("selected");
+		// });
+
 
 /////////////////////// BUGS ////////////////////////////
 //1 rgb is lowercase with new game
