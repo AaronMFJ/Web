@@ -17,40 +17,51 @@ var easyMode = false;
 var hardMode = true;
 
 
-//set title display to match pickedColor
-colorDisplay.textContent = pickedColor
-
 
 //Easy Difficulty
-easy.addEventListener("click", easyGame);
+easy.addEventListener("click", function() {
+	easyMode = true;
+	hardMode = false;
+	newGame();
+});
+
 
 
 //Hard Difficulty
-hard.addEventListener("click", hardGame); 
+hard.addEventListener("click", function() {
+	easyMode = false;
+	hardMode = true;
+	newGame();
+}); 
 
 
-//Note:1
-for(var i = 0; i < squares.length; i++) {
-	//add initial colors
-	squares[i].style.backgroundColor = colors[i];
 
-	//add click listeners to squares
-	squares[i].addEventListener("click", function() {
-		var clickedColor = this.style.backgroundColor;
-		console.log(clickedColor)
-		if(!gameOver) {
-			if(clickedColor === pickedColor) {
-			resultDisplay.textContent = "Correct!";
-			gameOver = true;
-			win();
-		} else {
-			this.style.backgroundColor = "#232323";
-			resultDisplay.textContent = "Try Again!";
-			
+init();
+
+
+
+function init() {
+	//Note:1
+	for(var i = 0; i < squares.length; i++) {
+		//add click listeners to squares
+		squares[i].addEventListener("click", function() {
+			var clickedColor = this.style.backgroundColor;
+			if(!gameOver) {
+				if(clickedColor === pickedColor) {
+				resultDisplay.textContent = "Correct!";
+				gameOver = true;
+				win();
+			} else {
+				this.style.backgroundColor = "#232323";
+				resultDisplay.textContent = "Try Again!";
+				};
 			};
-		};
-	});
-};
+		});
+		newGame();
+	};
+}
+
+
 
 
 //Try Again?
@@ -99,11 +110,7 @@ function randomColor() {
 
 
 function newGame() {
-	if (easyMode) {
-		colors = colorGenerator(3)
-	} else {
-		colors = colorGenerator(6)
-	};
+	difficultyMode();
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
 	for(var i = 0; i < squares.length; i++) {
@@ -125,30 +132,19 @@ function newGame() {
 	gameOver = false;
 };
 
-
-
-function easyGame() {
-	easy.classList.add("selected");
-	hard.classList.remove("selected");
-	easyMode = true;
-	hardMode = false;
-	console.log("easy activated")
-	colors = colorGenerator(3);
-	newGame();
-};
-
-
-function hardGame() {
-	hard.classList.add("selected");
-	easy.classList.remove("selected");
-	easyMode = false;
-	hardMode = true;
-	console.log("hard activated");
-	newGame();
-
-};
-
-
+function difficultyMode() {
+	if (easyMode) {
+		easy.classList.add("selected");
+		hard.classList.remove("selected");
+		console.log("easy activated")
+		colors = colorGenerator(3)
+	} else {
+		hard.classList.add("selected");
+		easy.classList.remove("selected");
+		console.log("hard activated");
+		colors = colorGenerator(6)
+	}
+}
 
 /////////////////////	NOTES	////////////////////////////
 // Note1:

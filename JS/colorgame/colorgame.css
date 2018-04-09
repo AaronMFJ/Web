@@ -24,6 +24,7 @@ button {
 	font-family: "Avenir";
 	height: 100%;
 	transition: all 0.25s;
+	outline: none;
 
 	/* for other browsers */
 	--webkit-transition: background 0.5s;
