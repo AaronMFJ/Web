@@ -58,9 +58,25 @@ else if(numChoice === 2){
 		console.log("rand number: " + number);
 		number-=5;
 	}
+
+	//While Loops Problem Set
+	var oneNum = -11;
+	while(oneNum < 19) {
+		console.log("numbers between -10 and 19: " + oneNum);
+		oneNum++;
+	}
+	var twoNum = 10;
+	while(twoNum < 40) {
+		if(twoNum % 2 === 0){
+		console.log("even numbers btwn 10-40: " + twoNum);
+		}
+		twoNum++;
+	}
+
+
 }
 
-//3. Drinking Age Guessing
+//3. Drinking Age Guessing (if statements)
 else if(numChoice === 3) {
 	// var firstName = prompt("Enter first name: ");
 	// var lastName = prompt("Enter last name: ");
