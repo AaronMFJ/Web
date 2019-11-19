@@ -7,7 +7,7 @@ var fullName = firstName + " " + lastName;
 var age = Number(prompt("Enter your age: "));
 
 //Select a game
-var stringChoice = prompt("Select game number: 1-guessing, 2-whileloops, 3-AgeVerification ");
+var stringChoice = prompt("Select game number: 1-guessing, 2-whileloops, 3-AgeVerification, 4-forloops ");
 var numChoice = Number(stringChoice);
 
 //create secret number for games
@@ -72,8 +72,25 @@ else if(numChoice === 2){
 		}
 		twoNum++;
 	}
-
-
+	var threeNum = 300;
+	while(threeNum < 333) {
+		if(threeNum % 2 === 1){
+		console.log("odd numbers between 300-333: " + threeNum);
+		}
+		threeNum++;
+	}
+	var fourNum = 5;
+	while(fourNum < 50) {
+		if(fourNum % 5 === 0 && fourNum % 3 === 0){
+		console.log("numbers divisible by 5-3 between 5-50: " + fourNum);
+		}
+		fourNum++;
+	}
+	var answer = prompt("are we there yet?");
+	//-1 returns if what you indexOf doesn't exist
+	while(answer.indexOf("yes") === -1) {
+		var answer = prompt("are we there yet?");
+	}
 }
 
 //3. Drinking Age Guessing (if statements)
@@ -115,4 +132,13 @@ else if(numChoice === 3) {
 		}
 		console.log("Welcome. Drinking age verified.");
 	}
+
+//3. Drinking Age Guessing (if statements)
+else if(numChoice === 3) {
+
+
+
+
+	}
+
 }
