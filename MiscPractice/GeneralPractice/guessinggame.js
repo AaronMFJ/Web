@@ -38,6 +38,8 @@ if(numChoice === 1){
 	}
 }
 
+//adding a new comment here to test github
+
 //2: While Loops.
 else if(numChoice === 2){
 	var count = 0;
