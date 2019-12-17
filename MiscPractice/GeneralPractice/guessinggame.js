@@ -38,8 +38,6 @@ if(numChoice === 1){
 	}
 }
 
-//adding a new comment here to test github
-
 //2: While Loops.
 else if(numChoice === 2){
 	var count = 0;
@@ -47,7 +45,7 @@ else if(numChoice === 2){
 	// var numName = Number(strName);
 
 	//remind user of name
-	alert("You said your name was " + fullName);
+	alert(`You said your name was ${fullName}`);
 	console.log("Length of name: " + fullName.length);
 
 	//display name, letter by letter
@@ -135,12 +133,12 @@ else if(numChoice === 3) {
 		console.log("Welcome. Drinking age verified.");
 	}
 
-//3. Drinking Age Guessing (if statements)
-else if(numChoice === 3) {
+//4. ForLoops
+// else if(numChoice === 4) {
 
 
 
 
-	}
+// 	}
 
 }
