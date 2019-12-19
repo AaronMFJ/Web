@@ -21,8 +21,32 @@ let tipAmount = 20 //prompt(`Tip %: `);
 
 totalBill = calculateBill(userTotal, tipAmount);
 alert(`Your total bill is ${totalBill}`);
-    
 
+
+// function add(a, b = 3) {
+//     const total = a + b;
+//     return total;
+// }
+
+//arrow functions
+const add = (a, b = 3) => a + b;
+
+//returning an object
+// function makeABaby(first, last) {
+//     const baby = {
+//         name: `${first} ${last}`,
+//         age: 0
+//     }
+//     return baby;
+// }
+
+const makeABaby = (first, last) => {
+    const baby = {
+        name: `${first} ${last}`,
+        age: 0
+    }
+    return baby;
+}
 
 
 
