@@ -7,35 +7,54 @@ var fullName = firstName + " " + lastName;
 var age = Number(prompt("Enter your age: "));
 
 //Select a game
-var stringChoice = prompt("Select game number: 1-guessing, 2-whileloops, 3-AgeVerification, 4-forloops ");
-var numChoice = Number(stringChoice);
+var stringChoice = prompt(`Select game number: 1-guessing, 2-whileloops, 3-AgeVerification, 
+4-forloops. 5-Functions`);
+var numChoice = Number(stringChoice); //convert choice from str to num
 
 //create secret number for games
 var number = 10;
 console.log(number);
 
+//Ask to play again
+function playAgain(){
+	playAnswer = prompt("Play again? yes/no");
+	return playAnswer;
+}
+
 //1: Guessing Game. Ask user for a guess.
 if(numChoice === 1){
-	var stringGuess = prompt("Guess a number: ");
-	var numGuess = Number(stringGuess);
-	console.log(numGuess, number);
+	guessFunc();
+
 	// func(guess){
 	// 	var numGuess = alert("Guess a number: ")
 	// };
 
 	//check the guess
-	if(numGuess === number) {
-		console.log("you guess correctly");
-		alert("you guessed correctly!");
-	}
+	function guessFunc(){
+		var stringGuess = prompt("Guess a number: ");
+		var numGuess = Number(stringGuess); //convert the string input into a number
+		console.log(numGuess, number);
 
-	else if(numGuess > number) {
-		alert("your guess is too high!");
-	}
+		if(numGuess === number) {
+			console.log("you guess correctly");
+			alert("you guessed correctly!");
+		}
 
-	else {
-		alert("your guess is too low!");
-	}
+		else if(numGuess > number) {
+			alert("your guess is too high!");
+			guessFunc();
+		}
+
+		else {
+			alert("your guess is too low!");
+			guessFunc();
+		}
+	};
+	response = playAgain(); //ask user if they want to play again via function
+		if (response === `yes`){
+			guessFunc();
+		}
+
 }
 
 //2: While Loops.
@@ -132,13 +151,53 @@ else if(numChoice === 3) {
 		}
 		console.log("Welcome. Drinking age verified.");
 	}
+}
 
 //4. ForLoops
-// else if(numChoice === 4) {
+else if(numChoice === 4) {
+	console.log(`starting ForLoops`);
+	
+	for(let count = 0; count < 6; count++) {
+		console.log(count);
+	}
+		//LOG<> take the full name entered at start and print out each letter
+	for(let i = 0; i < fullName.length; i++) {
+		console.log(fullName[i]);
+	}
 
+	console.log(`starting prob 1`);
+	for(i = -10; i < 19; i++) {
+		console.log(i);
+	}
 
+	console.log(`starting prob 2`);
+	for(i = 9; i <= 40; i++) {
+		if (i % 2 === 0){
+		console.log(i);
+		}
 
+	}
 
-// 	}
+	console.log(`starting prob 3`);
+	for(i = 300; i <= 333; i++) {
+		if (i % 2 !== 0) {
+		console.log(i);
+		}
+	}
+
+	console.log(`starting prob 4`);
+	for(i = 5; i <= 50; i++) {
+		if ((i % 3 === 0) && (i % 5 === 0)) {
+			console.log(i);
+		}
+
+	}
+}
+
+//5. Section 12 Functions
+else if(numChoice === 5) {
+console.log(`running selection 5`);
+console.log(`Hello ${fullName}`);
 
 }
+
