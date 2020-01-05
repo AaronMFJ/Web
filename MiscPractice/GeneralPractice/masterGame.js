@@ -196,8 +196,43 @@ else if(numChoice === 4) {
 
 //5. Section 12 Functions
 else if(numChoice === 5) {
-console.log(`running selection 5`);
-console.log(`Hello ${fullName}`);
+	console.log(`running selection 5`);
+	console.log(`Hello ${fullName}`);
+
+	//change - to _
+	function kebabChange() {
+		console.log(`kebab to snake`);
+		let kebabName = prompt(`Enter kebab-cased string: `);
+		//regular expression /chartoreplace/g=>replaceall
+		return kebabName.replace(/-/g , "_");
+	}
+
+	//return true if even and false otherwise
+	//decided to use an expression since I never need to know the return or change it
+	let isEven = function(numCheck) {
+		// if (numCheck % 2 === 0) {
+		// 	return true
+		// };
+		// return false;
+		return numCheck % 2 === 0;
+	}
+
+	function sing() {
+		console.log(`Twinkle twinkle..`);
+		console.log(`How I wonder..`);
+	}
+
+	setInterval(sing, 1000);//runs sing every 1000ms
+	setInterval(function() { //same thing but just defining here
+		console.log(`I am an anonymous function`);
+		console.log(`this is awesome`);
+	}, 2000);
+
+	console.log(kebabChange());
+	console.log(isEven(prompt(`Pick a number: `)));
+
+
+
 
 }
 
