@@ -2,36 +2,38 @@ console.log(`todo_exercise.js is connected!`);
 
 
 
-let toDoArray = [];
-console.log(userAnswer(userPrompt()));
-
+let toDoArray = []; //create array for todo list
+let userAnswer = ``;
+//log the result asking the user what they want to do
+// userAnswer();
 
 //prompt the user for input. RETURN new, list, quit
-function userPrompt() {
-    console.log(`running userPrompt()`);
-    return prompt(`What would you like to do? `);
-}
+// function userPrompt() {
+//     console.log(`running userPrompt()`);
+//     return prompt(`What would you like to do? `);
+// }
 
 function todoMaker() {
-    console.log(`running userMaker()`);
+    console.log(`running todoMaker()`);
     let enterTodo = prompt(`Enter a todo.`);
     toDoArray.push(enterTodo);
-    userPrompt();
+    // userAnswer();
 } 
 
-function userAnswer(str) {
-    if(str === `new`) {
-        todoMaker()
+// function userAnswer() {
+while (userAnswer !== `quit`) {
+userAnswer = prompt(`What would you like to do? `);
+    if (userAnswer === `new`) {
+        todoMaker();
     }
-    else if(str === `list`) {
+    else if(userAnswer === `list`) {
         console.log(toDoArray);
-        userPrompt();
+        // userAnswer(); //need to find a way to not exit function
     }
-    else(str === `quit`)
-        console.log(`exiting`);
-        return -1
+    else if(userAnswer === `quit`) {
+        userAnswer = `quit`;
+    }
 }
-//prompt user and ask for input
-//send input to check function
-//return check function to array push/remove
-//prompt again
+console.log(`exiting`);
+// }
+
