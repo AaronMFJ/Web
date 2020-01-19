@@ -20,6 +20,16 @@ function todoMaker() {
     // userAnswer();
 } 
 
+// function deleteToDo(string) {
+//     console.log(`running deleteToDo()`);
+//     //iterate through the array, find the match, and remove it
+//     toDoArray.forEach(function(deleteMatches) {
+//         if(string === deleteMatches) {
+//             console.log(`DELETE ${string} matches ${deleteMatches}`);
+//         }
+//     })
+// }
+
 // function userAnswer() {
 while (userAnswer !== `quit`) {
 userAnswer = prompt(`What would you like to do? `);
@@ -28,7 +38,22 @@ userAnswer = prompt(`What would you like to do? `);
     }
     else if(userAnswer === `list`) {
         console.log(toDoArray);
+        toDoArray.forEach(function(logArrayList){
+            console.log(`Todo list: ${logArrayList}`);
+        });
         // userAnswer(); //need to find a way to not exit function
+    }
+    else if(userAnswer === `delete`) {
+        //get thing to delete from user (picktoDelete)
+        let pickToDelete = prompt(`What do you want to delete? ${toDoArray}`);
+        //for each item in array, deleteMatches is the hold for each item
+        toDoArray.forEach(function(deleteMatches) {
+            if(pickToDelete === deleteMatches) {
+                console.log(`DELETE: ${pickToDelete} matches ${deleteMatches}. DELETING INDEX: ${toDoArray.indexOf(pickToDelete)}`);
+                //find index location of the user selection, and only remove that 1
+                toDoArray.splice(toDoArray.indexOf(pickToDelete), 1);
+            }
+        });
     }
     else if(userAnswer === `quit`) {
         userAnswer = `quit`;
