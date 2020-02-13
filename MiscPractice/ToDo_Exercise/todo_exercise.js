@@ -72,16 +72,25 @@ function sumArray(array){
 }
 
 function maxArray(array){
-    let arrayMax = 0;
-    array.forEach(function(element) {
-        if(element > arrayMax) {
-            arrayMax = Math.floor(element);
-            console.log(arrayMax, element);
+    var arrayMax = array[0];
+    for(var i = 1; i < array.length; i++){
+        if(array[i] > arrayMax) {
+            arrayMax = array[i];
         }
-    })
-    console.log(arrayMax);
+    };
     return arrayMax;
 }
+    //foreach method below DOES work, though not a great way to do it
+//     let arrayMax = 0;
+//     array.forEach(function(element) {
+//         if(element > arrayMax) {
+//             arrayMax = Math.floor(element);
+//             console.log(arrayMax, element);
+//         }
+//     })
+//     console.log(`returning ${arrayMax}`);
+//     return arrayMax;
+// }
 
 function uniform(array) {
     // trying without a foreach
