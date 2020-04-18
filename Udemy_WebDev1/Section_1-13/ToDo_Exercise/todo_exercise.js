@@ -78,6 +78,7 @@ function maxArray(array){
             arrayMax = array[i];
         }
     };
+    console.log(arrayMax);
     return arrayMax;
 }
     //foreach method below DOES work, though not a great way to do it
