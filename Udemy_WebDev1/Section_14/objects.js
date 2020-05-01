@@ -75,3 +75,31 @@ var someObjects = {
 //person.name = "Travis";
 //person.age = 21;
 //person.city = "LA";
+
+
+//--------------ADDING METHODS TO OBJECTS
+//you can add functions to objects. A method is just a function that is a property inside object
+
+var obj = {
+    name: "chuck",
+    age: 35,
+    isCool: false,
+    friends: ["bob", "tina"],
+    add: function(x, y) {
+        return x + y;
+    }
+}
+
+//if we wanted to call the add function, call obj.add(10, 5);
+
+//in JS, you can use keyword this. To demonstrate, we are creating
+//a function in the comments method. Then to access the .data, we can
+//use this.data to iterate through the data object.
+//in example, the word THIS referrs to the object COMMENTS
+var comments = {}
+comments.data = ["good job", "bye", "lame"];
+comments.print = function() {
+    this.data.forEach(function(el){
+        console.log(el);
+    });
+}
