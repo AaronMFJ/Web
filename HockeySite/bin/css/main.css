@@ -14,3 +14,10 @@ iframe {
     height: 100%; 
     border: none; 
     }
+
+.magic-background {
+    background-image: url('http://cafeemily.com/wp-content/uploads/2016/07/jurassic_park.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
