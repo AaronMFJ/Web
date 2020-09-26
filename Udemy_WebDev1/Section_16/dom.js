@@ -18,6 +18,7 @@ var paragraph = document.querySelector("p");
 
 
 button.addEventListener("click", function() {
+    button.style.background = "blue";
     paragraph.textContent = "Yay we changed the text";
     console.log("button clicked");
 });
